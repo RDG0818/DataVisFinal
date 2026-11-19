@@ -1,0 +1,32 @@
+school,unitid,ipeds_name,status
+Boston College,164924,Boston College,unitid_exists_in_official_HD2024
+Boston University,164988,Boston University,unitid_exists_in_official_HD2024
+California Institute of Technology,110404,California Institute of Technology,unitid_exists_in_official_HD2024
+Carnegie Mellon University,211440,Carnegie Mellon University,unitid_exists_in_official_HD2024
+Columbia University,190150,Columbia University in the City of New York,unitid_exists_in_official_HD2024
+Cornell University,190415,Cornell University,unitid_exists_in_official_HD2024
+Duke University,198419,Duke University,unitid_exists_in_official_HD2024
+Emory University,139658,Emory University,unitid_exists_in_official_HD2024
+Harvard University,166027,Harvard University,unitid_exists_in_official_HD2024
+Johns Hopkins University,162928,Johns Hopkins University,unitid_exists_in_official_HD2024
+Massachusetts Institute of Technology,166683,Massachusetts Institute of Technology,unitid_exists_in_official_HD2024
+Northeastern University,167358,Northeastern University,unitid_exists_in_official_HD2024
+Princeton University,186131,Princeton University,unitid_exists_in_official_HD2024
+Rice University,227757,Rice University,unitid_exists_in_official_HD2024
+Stanford University,243744,Stanford University,unitid_exists_in_official_HD2024
+Tufts University,168148,Tufts University,unitid_exists_in_official_HD2024
+"University of California, Berkeley",110635,University of California-Berkeley,unitid_exists_in_official_HD2024
+"University of California, Davis",110644,University of California-Davis,unitid_exists_in_official_HD2024
+"University of California, Irvine",110653,University of California-Irvine,unitid_exists_in_official_HD2024
+"University of California, Los Angeles",110662,University of California-Los Angeles,unitid_exists_in_official_HD2024
+"University of California, Riverside",110671,University of California-Riverside,unitid_exists_in_official_HD2024
+"University of California, San Diego",110680,University of California-San Diego,unitid_exists_in_official_HD2024
+"University of California, Santa Barbara",110705,University of California-Santa Barbara,unitid_exists_in_official_HD2024
+"University of California, Santa Cruz",110714,University of California-Santa Cruz,unitid_exists_in_official_HD2024
+University of Florida,134130,University of Florida,unitid_exists_in_official_HD2024
+University of Michigan-Ann Arbor,170976,University of Michigan-Ann Arbor,unitid_exists_in_official_HD2024
+University of North Carolina at Chapel Hill,199120,University of North Carolina at Chapel Hill,unitid_exists_in_official_HD2024
+University of Rochester,195030,University of Rochester,unitid_exists_in_official_HD2024
+University of Southern California,123961,University of Southern California,unitid_exists_in_official_HD2024
+University of Virginia-Main Campus,234076,University of Virginia-Main Campus,unitid_exists_in_official_HD2024
+Yale University,130794,Yale University,unitid_exists_in_official_HD2024

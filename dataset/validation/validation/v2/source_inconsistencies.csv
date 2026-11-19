@@ -1,0 +1,3 @@
+school,unitid,cohort_year,metric,severity,issue,source_url,page
+Case Western Reserve University,201645,2024,act_submit_pct,warning,Reported ACT share 23% differs from the accompanying 269 score submitters / C1 1619 enrolled. Reported percent retained; denominator/version cause unverified.,https://case.edu/ir/sites/default/files/2025-02/CWRU%202024%20-%2025%20CDS.pdf,10
+Purdue University-Main Campus,243780,2024,admitted,warning,Official printed total 30272 versus both gender and residency sums 39272. Primary preserves 30272; separate derived metric preserves 39272. No editorial correction is imposed.,https://www.purdue.edu/idata/wp-content/uploads/2026/04/CDS_2024-2025.xlsx,CDS-C!C42

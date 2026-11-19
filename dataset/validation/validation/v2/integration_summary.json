@@ -1,0 +1,46 @@
+{
+  "ipeds_institutions": 2634,
+  "ipeds_institution_years": 22531,
+  "ipeds_year_coverage": {
+    "2014": 2236,
+    "2015": 2212,
+    "2016": 2069,
+    "2017": 2075,
+    "2018": 2039,
+    "2019": 2011,
+    "2020": 1989,
+    "2021": 1981,
+    "2022": 1991,
+    "2023": 1972,
+    "2024": 1956
+  },
+  "cds_schools": 61,
+  "cds_school_years": 127,
+  "cds_observations": 1473,
+  "cds_year_coverage": {
+    "2019": 1,
+    "2020": 3,
+    "2021": 2,
+    "2022": 6,
+    "2023": 55,
+    "2024": 52,
+    "2025": 8
+  },
+  "cds_schools_both_2023_2024": 46,
+  "cds_2023_2024_schools": 61,
+  "v1_observations_preserved": 842,
+  "cds_ipeds_status": {
+    "exact_match": 268,
+    "difference_preserved": 89,
+    "not_available": 24
+  },
+  "source_documents": 160,
+  "checks": {
+    "unique_keys": true,
+    "all_adm_years_present": true,
+    "institution_universe_equal": true,
+    "v1_values_preserved": true,
+    "long_wide_all_values_equal": true,
+    "all_cds_source_ids_resolve": true
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "reporter_rows": 22531,
+  "unique_institutions": 2634,
+  "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "by_year": [
+    {
+      "year": 2014,
+      "adm_rows": 2236,
+      "matched_same_year_hd": 2236,
+      "unmatched_hd": 0,
+      "complete_c1_triples": 2217
+    },
+    {
+      "year": 2015,
+      "adm_rows": 2212,
+      "matched_same_year_hd": 2212,
+      "unmatched_hd": 0,
+      "complete_c1_triples": 2192
+    },
+    {
+      "year": 2016,
+      "adm_rows": 2069,
+      "matched_same_year_hd": 2069,
+      "unmatched_hd": 0,
+      "complete_c1_triples": 2046
+    },
+    {
+      "year": 2017,
+      "adm_rows": 2075,
+      "matched_same_year_hd": 2075,
+      "unmatched_hd": 0,
+      "complete_c1_triples": 2043
+    },
+    {
+      "year": 2018,
+      "adm_rows": 2039,
+      "matched_same_year_hd": 2039,
+      "unmatched_hd": 0,
+      "complete_c1_triples": 2007
+    },
+    {
+      "year": 2019,
+      "adm_rows": 2011,
+      "matched_same_year_hd": 2011,
+      "unmatched_hd": 0,
+      "complete_c1_triples": 1988
+    },
+    {
+      "year": 2020,
+      "adm_rows": 1989,
+      "matched_same_year_hd": 1989,
+      "unmatched_hd": 0,
+      "complete_c1_triples": 1964
+    },
+    {
+      "year": 2021,
+      "adm_rows": 1981,
+      "matched_same_year_hd": 1981,
+      "unmatched_hd": 0,
+      "complete_c1_triples": 1957
+    },
+    {
+      "year": 2022,
+      "adm_rows": 1991,
+      "matched_same_year_hd": 1991,
+      "unmatched_hd": 0,
+      "complete_c1_triples": 1958
+    },
+    {
+      "year": 2023,
+      "adm_rows": 1972,
+      "matched_same_year_hd": 1972,
+      "unmatched_hd": 0,
+      "complete_c1_triples": 1946
+    },
+    {
+      "year": 2024,
+      "adm_rows": 1956,
+      "matched_same_year_hd": 1956,
+      "unmatched_hd": 0,
+      "complete_c1_triples": 1928
+    }
+  ],
+  "matched_hd_rows": 22531,
+  "complete_c1_triples": 22246,
+  "issues": {},
+  "adm_raw_columns": 109,
+  "hd_selected_columns": 16,
+  "source_tables": 22,
+  "final_years": "2014-2023",
+  "provisional_years": "2024"
+}

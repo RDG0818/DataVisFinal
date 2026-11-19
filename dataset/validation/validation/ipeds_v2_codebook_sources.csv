@@ -1,0 +1,12 @@
+year,source_url,sha256,local_path,ADMCON7_codes
+2014,https://nces.ed.gov/ipeds/tablefiles/tableDocs/IPEDS201415Tablesdoc.xlsx,936f2e96ee111bef89495eef5fec324513ca5b9f8a92ddd18d366a3283afe3aa,raw/ipeds_v2/codebooks/IPEDS201415Tablesdoc.xlsx,-1;-2;1;2;3;4
+2015,https://nces.ed.gov/ipeds/tablefiles/tableDocs/IPEDS201516Tablesdoc.xlsx,ccca49877c72d6957815778aea693cde05a56fc2c6cfd9f1a5a5d412bc388df5,raw/ipeds_v2/codebooks/IPEDS201516Tablesdoc.xlsx,1;2;3;4;-1;-2
+2016,https://nces.ed.gov/ipeds/tablefiles/tableDocs/IPEDS201617Tablesdoc.xlsx,c139c0d777718cf286dc88065d7dc61ede4666acd3427926626100a345c05a77,raw/ipeds_v2/codebooks/IPEDS201617Tablesdoc.xlsx,1;5;2;3;-1;-2
+2017,https://nces.ed.gov/ipeds/tablefiles/tableDocs/IPEDS201718Tablesdoc.xlsx,2c667f671b55192e5c4bba5e94600a3f0e4c9a49da7feee71f7f07e4005f1827,raw/ipeds_v2/codebooks/IPEDS201718Tablesdoc.xlsx,1;5;2;3;-1;-2
+2018,https://nces.ed.gov/ipeds/tablefiles/tableDocs/IPEDS201819Tablesdoc.xlsx,7f6327b99125ecd3f790edc2bb00ef5daf6020e91319fa3bc435c6df5c14a7be,raw/ipeds_v2/codebooks/IPEDS201819Tablesdoc.xlsx,1;5;2;3;-1;-2
+2019,https://nces.ed.gov/ipeds/tablefiles/tableDocs/IPEDS201920Tablesdoc.xlsx,05c9312d798a5a1fd3f93a1fe36d7d7a514437a692e130174f2b8b82400c9f1b,raw/ipeds_v2/codebooks/IPEDS201920Tablesdoc.xlsx,1;5;2;3;-1;-2
+2020,https://nces.ed.gov/ipeds/tablefiles/tableDocs/IPEDS202021Tablesdoc.xlsx,0581842547d53fdf0b31cb71e8b2a90669db9abb6b3e8def78c38ccdcecea19f,raw/ipeds_v2/codebooks/IPEDS202021Tablesdoc.xlsx,1;5;2;3;-1;-2
+2021,https://nces.ed.gov/ipeds/tablefiles/tableDocs/IPEDS202122Tablesdoc.xlsx,46ca179b41a58b3ad58c02830e840c9dde42d0e6b1de070d6266ad0fc59943e4,raw/ipeds_v2/codebooks/IPEDS202122Tablesdoc.xlsx,1;5;2;3;-1;-2
+2022,https://nces.ed.gov/ipeds/tablefiles/tableDocs/IPEDS202223Tablesdoc.xlsx,5e0fd8ab6172041aa3198a2baa60266c13e91255d43cde37485f81c420f0c995,raw/ipeds_v2/codebooks/IPEDS202223Tablesdoc.xlsx,1;5;3;-1;-2
+2023,https://nces.ed.gov/ipeds/tablefiles/tableDocs/IPEDS202324Tablesdoc.xlsx,1e3f210f8479fb66fc203d60f01efb6e6d825b316f1a36fb96ffc7dca217384a,raw/ipeds_v2/codebooks/IPEDS202324Tablesdoc.xlsx,1;5;3;-1;-2
+2024,https://nces.ed.gov/ipeds/tablefiles/tableDocs/IPEDS202425Tablesdoc.xlsx,e5c2197f55fb3f8853b866cde05d6d0be167c37480f9d0825ff4b7d60aaf5f6e,raw/ipeds_v2/codebooks/IPEDS202425Tablesdoc.xlsx,1;5;3;-1;-2

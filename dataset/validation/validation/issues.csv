@@ -1,0 +1,2 @@
+school,unitid,cohort_year,rule,severity,detail,source_url,page
+Duke University,198419,2023,gender_sum,warning,applicants: reported total 46366 vs categories 46333; extra/unknown categories may be unreported,https://ir.provost.duke.edu/sites/default/files/CDS-2023-24-FINAL-2.pdf,11

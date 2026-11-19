@@ -1,0 +1,91 @@
+{
+  "years": 11,
+  "ADMCON7_value_rows": 63,
+  "values_by_year": {
+    "2014": {
+      "-1": "Not reported",
+      "-2": "Not applicable",
+      "1": "Required",
+      "2": "Recommended",
+      "3": "Neither required nor recommended",
+      "4": "Do not know"
+    },
+    "2015": {
+      "1": "Required",
+      "2": "Recommended",
+      "3": "Neither required nor recommended",
+      "4": "Do not know",
+      "-1": "Not reported",
+      "-2": "Not applicable"
+    },
+    "2016": {
+      "1": "Required",
+      "5": "Considered but not required",
+      "2": "Recommended",
+      "3": "Neither required nor recommended",
+      "-1": "Not reported",
+      "-2": "Not applicable"
+    },
+    "2017": {
+      "1": "Required",
+      "5": "Considered but not required",
+      "2": "Recommended",
+      "3": "Neither required nor recommended",
+      "-1": "Not reported",
+      "-2": "Not applicable"
+    },
+    "2018": {
+      "1": "Required",
+      "5": "Considered but not required",
+      "2": "Recommended",
+      "3": "Neither required nor recommended",
+      "-1": "Not reported",
+      "-2": "Not applicable"
+    },
+    "2019": {
+      "1": "Required",
+      "5": "Considered but not required",
+      "2": "Recommended",
+      "3": "Neither required nor recommended",
+      "-1": "Not reported",
+      "-2": "Not applicable"
+    },
+    "2020": {
+      "1": "Required",
+      "5": "Considered but not required",
+      "2": "Recommended",
+      "3": "Neither required nor recommended",
+      "-1": "Not reported",
+      "-2": "Not applicable"
+    },
+    "2021": {
+      "1": "Required",
+      "5": "Considered but not required",
+      "2": "Recommended",
+      "3": "Neither required nor recommended",
+      "-1": "Not reported",
+      "-2": "Not applicable"
+    },
+    "2022": {
+      "1": "Required to be considered for admission",
+      "5": "Not required for admission, but considered if submitted (Test Optional)",
+      "3": "Not considered for admission, even if submitted (Test Blind)",
+      "-1": "Not reported",
+      "-2": "Not applicable"
+    },
+    "2023": {
+      "1": "Required to be considered for admission",
+      "5": "Not required for admission, but considered if submitted (Test Optional)",
+      "3": "Not considered for admission, even if submitted (Test Blind)",
+      "-1": "Not reported",
+      "-2": "Not applicable"
+    },
+    "2024": {
+      "1": "Required to be considered for admission",
+      "5": "Not required for admission, but considered if submitted (Test Optional)",
+      "3": "Not considered for admission, even if submitted (Test Blind)",
+      "-1": "Not reported",
+      "-2": "Not applicable"
+    }
+  }
+}

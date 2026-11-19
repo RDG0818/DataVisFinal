@@ -1,0 +1,13 @@
+{
+  "id": "yangkuangou/cds-v2-private-document-recovery-batch-two",
+  "title": "CDS v2 private document recovery batch two",
+  "code_file": "recover.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

@@ -1,0 +1,616 @@
+{
+  "title": "US College Admissions: CDS Panel 2019-2025",
+  "id": "yangkuangou/us-college-admissions-cds-panel-2019-2025",
+  "subtitle": "31 schools, official CDS sources, tidy and wide tables, IPEDS checks",
+  "description": "\n**31 schools · 72 school-years · 842 source-preserving observations**\n\nCompare institutional admissions, waitlists, score-submitter distributions, enrollment and selected need-based aid data using official university Common Data Sets. This is an **unbalanced** panel, not complete coverage of every field or every year.\n\nStart with `cds_wide.csv` for exploration, or `cds_long.csv` for exact populations and field-level source URLs, pages and methods. All 31 schools have at least one same-year C1 cross-check against directly acquired official NCES IPEDS ADM. Reported differences stay visible in `consistency.csv`; no CDS value is overwritten, imputed or interpolated.\n\n| File | Use |\n|---|---|\n| `cds_long.csv` | One sourced numeric observation per metric and population |\n| `cds_wide.csv` | One institution and entering-fall year per row, with JSON provenance |\n| `sources.csv` | Exact official documents, locations, acquisition methods and available hashes |\n| `DATA_DICTIONARY.md` | Definitions, units, denominators and temporal alignment |\n| `coverage.csv`, `metric_coverage.csv` | Actual coverage and missing fields |\n| `consistency.csv`, `issues.csv` | IPEDS discrepancies and numerical rule findings |\n| `reproducibility.zip` | Frozen source observations, build scripts and official IPEDS reference CSVs |\n| `REPORT.md` | Detailed Chinese acceptance report and plan to reach 60 schools |\n\nAdmission rate = admitted / applicants; yield = enrolled / admitted, with matching populations. Scores describe submitters, GPA scales vary, and aid means describe recipients. Columbia's CDS covers College + Engineering; Boston College excludes specified colleges. Aid cohorts follow the aid academic year, which may differ from the CDS edition. See row notes before comparing institutions or years.\n\nCompilation and original code: CC BY 4.0, attribution to yangkuangou and the listed institutions. Underlying university documents retain their own rights; this license does not relicense those documents or imply institutional endorsement. Federal IPEDS reference data are identified separately.\n\nThis upload is a **private review version**. Public release is reserved for the project Leader.\n",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0"
+    }
+  ],
+  "keywords": [
+    "education"
+  ],
+  "isPrivate": true,
+  "image": "cover.png",
+  "userSpecifiedSources": "Official university Common Data Sets; exact per-value source URLs and pages in cds_long.csv and sources.csv. Official NCES IPEDS ADM2019-2024; acquisition URLs and SHA256 in ipeds_sources.csv.",
+  "resources": [
+    {
+      "path": "cds_long.csv",
+      "description": "Authoritative tidy observations with per-value provenance",
+      "schema": {
+        "fields": [
+          {
+            "name": "school",
+            "description": "Reporting school display name; see notes for institutional scope",
+            "type": "string"
+          },
+          {
+            "name": "unitid",
+            "description": "NCES IPEDS institution identifier",
+            "type": "integer"
+          },
+          {
+            "name": "cohort_year",
+            "description": "Actual entering-fall or first-year aid cohort year",
+            "type": "integer"
+          },
+          {
+            "name": "cds_edition",
+            "description": "Source CDS academic-year edition; can differ from aid cohort",
+            "type": "string"
+          },
+          {
+            "name": "section",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "string"
+          },
+          {
+            "name": "metric",
+            "description": "Stable semantic measurement name; see DATA_DICTIONARY.md",
+            "type": "string"
+          },
+          {
+            "name": "population",
+            "description": "Exact denominator population",
+            "type": "string"
+          },
+          {
+            "name": "gender",
+            "description": "Reported category; absent category is not zero",
+            "type": "string"
+          },
+          {
+            "name": "residency",
+            "description": "Reported residency category",
+            "type": "string"
+          },
+          {
+            "name": "value",
+            "description": "Numeric source value; no imputation",
+            "type": "number"
+          },
+          {
+            "name": "unit",
+            "description": "count, percent (0-100), score, gpa or usd",
+            "type": "string"
+          },
+          {
+            "name": "source_id",
+            "description": "Join key to sources.csv",
+            "type": "string"
+          },
+          {
+            "name": "source_url",
+            "description": "Exact official source URL",
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "description": "Physical PDF page (1-based), worksheet/cell or HTML section",
+            "type": "string"
+          },
+          {
+            "name": "extraction_method",
+            "description": "Actual extraction or explicit derivation method",
+            "type": "string"
+          },
+          {
+            "name": "verification_status",
+            "description": "Source table-context review flag",
+            "type": "string"
+          },
+          {
+            "name": "rule_validation",
+            "description": "Implemented numeric rule check result",
+            "type": "string"
+          },
+          {
+            "name": "ipeds_c1_check",
+            "description": "Same-school-year C1 triple comparison, not a check of every field",
+            "type": "string"
+          },
+          {
+            "name": "notes",
+            "description": "Reporting scope, aid year, derivation operands and other source caveats",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "path": "cds_wide.csv",
+      "description": "One row per school and actual entering-fall year",
+      "schema": {
+        "fields": [
+          {
+            "name": "school",
+            "description": "Reporting school display name; see notes for institutional scope",
+            "type": "string"
+          },
+          {
+            "name": "unitid",
+            "description": "NCES IPEDS institution identifier",
+            "type": "integer"
+          },
+          {
+            "name": "cohort_year",
+            "description": "Actual entering-fall or first-year aid cohort year",
+            "type": "integer"
+          },
+          {
+            "name": "cds_edition",
+            "description": "Source CDS academic-year edition; can differ from aid cohort",
+            "type": "string"
+          },
+          {
+            "name": "ipeds_c1_check",
+            "description": "Same-school-year C1 triple comparison, not a check of every field",
+            "type": "string"
+          },
+          {
+            "name": "rule_validation",
+            "description": "Implemented numeric rule check result",
+            "type": "string"
+          },
+          {
+            "name": "act_composite_p25",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "act_composite_p50",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "act_composite_p75",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "act_submit_pct",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "admitted",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "admitted__gender_another_gender",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "admitted__gender_female",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "admitted__gender_male",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "admitted__residency_in_state",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "admitted__residency_international",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "admitted__residency_out_of_state",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "aid_need_based_grant_mean_usd",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "aid_need_based_grant_mean_usd__population_full_time_first_year",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "aid_need_based_grant_received_count",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "aid_need_based_grant_received_count__population_full_time_first_year",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "aid_need_based_received_count",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "aid_need_based_received_count__population_full_time_first_year",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "aid_need_determined_count",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "aid_need_determined_count__population_full_time_first_year",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "aid_need_fully_met_count",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "aid_need_fully_met_count__population_full_time_first_year",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "aid_need_met_pct",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "aid_need_met_pct__population_full_time_first_year",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "applicants",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "applicants__gender_another_gender",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "applicants__gender_female",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "applicants__gender_male",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "applicants__gender_unknown",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "applicants__residency_in_state",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "applicants__residency_international",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "applicants__residency_out_of_state",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "enrolled",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "enrolled__gender_another_gender",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "enrolled__gender_female",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "enrolled__gender_male",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "enrolled__residency_in_state",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "enrolled__residency_international",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "enrolled__residency_out_of_state",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "hs_gpa_4plus_pct",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "hs_gpa_mean",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "hs_rank_reported_pct",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "hs_rank_top10_pct",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "hs_rank_top25_pct",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "hs_rank_top50_pct",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "sat_composite_p25",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "sat_composite_p50",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "sat_composite_p75",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "sat_ebrw_p25",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "sat_ebrw_p50",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "sat_ebrw_p75",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "sat_math_p25",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "sat_math_p50",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "sat_math_p75",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "sat_submit_pct",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "undergraduate_enrollment",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "waitlist_accepted",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "waitlist_admitted",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "waitlist_offered",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "source_urls",
+            "description": "JSON array of documents used",
+            "type": "string"
+          },
+          {
+            "name": "field_provenance",
+            "description": "JSON map of each metric field to source/page/method/review status",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "path": "sources.csv",
+      "description": "Official source document registry",
+      "schema": {
+        "fields": [
+          {
+            "name": "source_id",
+            "description": "Join key to sources.csv",
+            "type": "string"
+          },
+          {
+            "name": "school",
+            "description": "Reporting school display name; see notes for institutional scope",
+            "type": "string"
+          },
+          {
+            "name": "unitid",
+            "description": "NCES IPEDS institution identifier",
+            "type": "integer"
+          },
+          {
+            "name": "cohort_year",
+            "description": "Actual entering-fall or first-year aid cohort year",
+            "type": "integer"
+          },
+          {
+            "name": "cohort_years",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "string"
+          },
+          {
+            "name": "cds_edition",
+            "description": "Source CDS academic-year edition; can differ from aid cohort",
+            "type": "string"
+          },
+          {
+            "name": "source_url",
+            "description": "Exact official source URL",
+            "type": "string"
+          },
+          {
+            "name": "local_path",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "string"
+          },
+          {
+            "name": "sha256",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "string"
+          },
+          {
+            "name": "retrieved_at",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "string"
+          },
+          {
+            "name": "format",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "string"
+          },
+          {
+            "name": "access_method",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "string"
+          },
+          {
+            "name": "notes",
+            "description": "Reporting scope, aid year, derivation operands and other source caveats",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "path": "consistency.csv",
+      "description": "Same-year C1 comparison with official IPEDS; differences retained",
+      "schema": {
+        "fields": [
+          {
+            "name": "school",
+            "description": "Reporting school display name; see notes for institutional scope",
+            "type": "string"
+          },
+          {
+            "name": "unitid",
+            "description": "NCES IPEDS institution identifier",
+            "type": "integer"
+          },
+          {
+            "name": "cohort_year",
+            "description": "Actual entering-fall or first-year aid cohort year",
+            "type": "integer"
+          },
+          {
+            "name": "metric",
+            "description": "Stable semantic measurement name; see DATA_DICTIONARY.md",
+            "type": "string"
+          },
+          {
+            "name": "cds_value",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "ipeds_variable",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "string"
+          },
+          {
+            "name": "ipeds_value",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "cds_minus_ipeds",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "number"
+          },
+          {
+            "name": "status",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "string"
+          },
+          {
+            "name": "cds_source_url",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "string"
+          },
+          {
+            "name": "cds_page",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "string"
+          },
+          {
+            "name": "ipeds_source_url",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "string"
+          },
+          {
+            "name": "ipeds_retrieval_file",
+            "description": "See DATA_DICTIONARY.md; population suffixes are part of the field definition",
+            "type": "string"
+          },
+          {
+            "name": "notes",
+            "description": "Reporting scope, aid year, derivation operands and other source caveats",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "dataset-metadata.json": {
+    "bytes": 68052,
+    "sha256": "40b86eb5957c38cc4838e53ba1d71500d0ef0a73435cb57fe3f441f223804b37"
+  },
+  "institutions.csv": {
+    "bytes": 623609,
+    "sha256": "6a138a4c76a9a99af034f0a55e9824fb2d3559a40ad081fdf8bd99f14e5f5ad7"
+  },
+  "DATA_DICTIONARY.md": {
+    "bytes": 19393,
+    "sha256": "75f39320fc99f10ff322d656af13b729942d42427070881678f8578136d03d55"
+  },
+  "ipeds_admissions_panel.csv": {
+    "bytes": 26893102,
+    "sha256": "29eabca160a73ef9b94a4523e9cde15b802ea2cc7735b0f89633062ca418ed6b"
+  },
+  "ipeds_variable_mapping.csv": {
+    "bytes": 20255,
+    "sha256": "50935462ed2afca6f0a92fb8e0803ee207b2f2f86ca798a3615a5cbee5961e2e"
+  },
+  "validation.zip": {
+    "bytes": 37621,
+    "sha256": "2516d3315ac9eb6b50d490c42872ebff564eaadb055016e0574b27fb83687834"
+  },
+  "cds_enrichment_wide.csv": {
+    "bytes": 304563,
+    "sha256": "8326a6df3d035f93560733dcdfbcaff81482ba1a0405626ae39b05ce95dac55a"
+  },
+  "README.md": {
+    "bytes": 4547,
+    "sha256": "efe41a0e78a4314e34f0d89d5721a5101793ff9c37840be3263d8b9ba7935a9e"
+  },
+  "cover.png": {
+    "bytes": 16302,
+    "sha256": "a9cc7ce7c8d32e1df7d4c8ae6e57fec87418006bfe4bc6cb4bc10380652b7b46"
+  },
+  "cds_enrichment_long.csv": {
+    "bytes": 589479,
+    "sha256": "5d7d3c767ccc8061e8e8e0bb2e142b9f84369e7541fd917bf770998f8d29dfb8"
+  },
+  "reproducibility.zip": {
+    "bytes": 13494087,
+    "sha256": "577b7a969f9febf19ead0788c5b36ce9ab0a994353fd4bda663aae456f7b765e"
+  },
+  "sources.csv": {
+    "bytes": 78137,
+    "sha256": "79dca96491bb87b7ef41a5557969db847cfef69de287794dd04bfe0509939425"
+  }
+}

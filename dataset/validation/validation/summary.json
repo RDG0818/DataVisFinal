@@ -1,0 +1,28 @@
+{
+  "schools": 61,
+  "school_years": 127,
+  "observations": 1473,
+  "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "sources": 127,
+  "schools_with_ipeds_crosscheck": 61,
+  "ipeds_metric_status": {
+    "exact_match": 268,
+    "difference_preserved": 89,
+    "not_available": 24
+  },
+  "rule_errors": 0,
+  "rule_warnings": 1,
+  "excluded_observations": 72,
+  "verification_status": {
+    "source_table_reviewed": 1473
+  },
+  "all_missing_values_unimputed": true
+}
