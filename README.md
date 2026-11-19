@@ -20,23 +20,15 @@ Kaggle: US College Admissions Panel (IPEDS + CDS), 2014-2024, 2,634 institutions
 
 ## Phase 2: Design and Data Prep
 
-### Design rules (from the lectures)
-- The task is "present": we already know the story and want the audience to compare groups and see trends and outliers.
-- Position on a common scale is the easiest thing to read. Color and area are harder. So the main comparisons use lines and slopes, and the map (color only) gets value labels.
-- Color maps: diverging for change around zero, sequential for ordered groups (selectivity tiers), categorical for unordered groups (max 3 or 4 hues).
-- Avoid red/green. Use blue/orange. Keep the same color for the same group in every figure.
-- Light gridlines behind the data, or none. No borders or fills that carry no data.
-- Label lines directly instead of using a legend. Gray for context, one accent color for the point.
-- One sans serif font. Titles say the finding. Left-aligned text, no all-caps sentences.
-- Mark 2020 on every time series. Keep line charts close to a 45 degree slope (banking) so changes are easy to see.
-
 ### Planned Visualizations
-1. **Enrollment change map (Q1).** Choropleth by state, since the data is already aggregated to regions and proportional symbols read worse here. Albers USA projection (equal area, Alaska and Hawaii inset; Alaska is shown scaled down, so note it). Two panels, 2014-2019 and 2019-2024, sharing one diverging scale centered on 0%, in 5 to 7 bins. Label the largest gains and losses.
-2. **Indexed enrollment lines (Q1).** Line chart, 2014 = 100, total first-year enrollment. Two panels: by control, and by Census region. Direct labels at the line ends.
-3. **Covid slope chart (Q2).** Slope chart, 2019 to 2021, one small panel each for applicants (indexed, 2019 = 100), admit rate, and yield. One line per selectivity tier, sequential single-hue colors since the tiers are ordered. Print the end values.
-4. **Test submission rate (Q3).** Line chart, 2014-2024, median share of admitted/enrolled students submitting scores, one line per 2019 policy group. Y axis 0-100%.
-5. **Test-optional vs test-required outcomes (Q3).** Three small panels (applicants, admit rate, yield), two lines each, indexed to 2019 = 100. Same two colors as figure 4. Caption says this shows what happened, not what caused it.
-6. **Score shift (Q3, optional).** Median ACT composite 25th and 75th percentile by year for the same two groups, lines with the range shaded. ACT is used because the SAT was rescaled in 2016. Percentiles are for submitters only, say so in the caption.
+1. Enrollment change map by state (Q1)
+2. Indexed enrollment lines by control and region (Q1)
+3. Covid slope chart by selectivity tier (Q2)
+4. Test submission rate by policy group (Q3)
+5. Test-optional vs test-required outcomes (Q3)
+6. ACT percentile shift (Q3, optional)
+
+Design rules and figure specifics are in `CLAUDE.md`.
 
 ### Data cleaning
 Setup:
