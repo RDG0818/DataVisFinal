@@ -43,7 +43,7 @@ The notebook does this, in order:
 5. Build the Covid table: % change in first-year enrollment by state, 2019 to 2020, using schools that report in both years. Saved to `clean/map_covid.csv`.
 6. Build the dumbbell table: % change in first-year enrollment vs 2019, for 2020 and 2024, by 2019 admit-rate tier, using schools that report in 2019, 2020 and 2024. Saved to `clean/dumbbell_covid.csv`.
 
-Each figure has its own script in `scripts/`. Run them from the repo root after the notebook:
+Each figure has its own script in `scripts/` (shared styling and saving is in `scripts/utils.py`). Run them from the repo root after the notebook:
 ```bash
 python scripts/covid_map.py        # clean/map_covid.csv -> figures/fig1_covid_map.png
 python scripts/covid_dumbbell.py   # clean/dumbbell_covid.csv -> figures/fig2_covid_dumbbell.png
