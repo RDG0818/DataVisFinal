@@ -22,6 +22,7 @@ Kaggle: US College Admissions Panel (IPEDS + CDS), 2014-2024, 2,634 institutions
 
 ### Planned Visualizations
 - [x] Covid enrollment map by state (Q2)
+- [x] Enrollment change by selectivity tier, 2020 and 2024 dumbbell (Q2)
 
 More figures will be added one at a time. Design rules and figure specifics are in `CLAUDE.md`.
 
@@ -40,10 +41,12 @@ The notebook does this, in order:
 3. Keep the 50 states and DC.
 4. Drop impossible rows (admitted > applicants, enrolled > admitted, zero counts).
 5. Build the Covid table: % change in first-year enrollment by state, 2019 to 2020, using schools that report in both years. Saved to `clean/map_covid.csv`.
+6. Build the dumbbell table: % change in first-year enrollment vs 2019, for 2020 and 2024, by 2019 admit-rate tier, using schools that report in 2019, 2020 and 2024. Saved to `clean/dumbbell_covid.csv`.
 
-The map is drawn by `covid_map.py`, which reads `clean/map_covid.csv` and saves `figures/fig1_covid_map.png`. Run it from the repo root after the notebook:
+Each figure has its own script in `scripts/`. Run them from the repo root after the notebook:
 ```bash
-python covid_map.py
+python scripts/covid_map.py        # clean/map_covid.csv -> figures/fig1_covid_map.png
+python scripts/covid_dumbbell.py   # clean/dumbbell_covid.csv -> figures/fig2_covid_dumbbell.png
 ```
 
 ---

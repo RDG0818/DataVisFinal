@@ -1,7 +1,7 @@
 """Figure 1: change in first-year enrollment by state, fall 2019 to fall 2020.
 
 Reads clean/map_covid.csv (made by clean_data.ipynb) and writes figures/fig1_covid_map.png.
-Run from the repo root: python covid_map.py
+Run from the repo root: python scripts/covid_map.py
 """
 from pathlib import Path
 
